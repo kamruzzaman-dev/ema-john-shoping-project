@@ -8,4 +8,6 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 45px;
     margin-top: 120px;
+    justify-content: center;
+    align-items: center;
 }
