@@ -13,8 +13,8 @@ const Products = () => {
     /* store items which one is clicked */
     const [items, setitems] = useState([]);
     /* function for handle add to cart  */
-    function AddToCart(id) {
-        const newCart = [...items, id];
+    function AddToCart(product) {
+        const newCart = [...items, product];
         setitems(newCart);
     }
     console.log(items.length)

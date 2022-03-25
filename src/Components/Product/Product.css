@@ -36,6 +36,7 @@
     line-height: 18px;
     padding: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 .btn-cart:hover{
     background-color: orange;

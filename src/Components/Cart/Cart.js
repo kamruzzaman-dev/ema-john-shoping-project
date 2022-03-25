@@ -4,23 +4,22 @@ const Cart = (props) => {
     // console.log(props);
     /* directly props got a object. and this object had a array with element  */
     const { items } = props;
-    console.log(items);
     let totalPrice = 0;
     let shippingCharge = 0;
     let tax = 0;
 
     for (const item of items) {
-        /* totalPrice = totalPrice + item.price;
+        totalPrice = totalPrice + item.price;
         shippingCharge = shippingCharge + item.shipping;
-        tax = tax + parseFloat((item.price * .01).toFixed(2)); */
-        console.log(item);
+        tax = tax + parseFloat((item.price * .01).toFixed(2));
     }
+    tax = parseFloat(tax.toFixed(2))
     let grandTotal = totalPrice + shippingCharge + tax;
     return (
         <div className='cart-contianer'>
             <h1>Order Summary</h1>
             <div>
-                <p>toal price : ${ }</p>
+                <p>toal price : ${totalPrice}</p>
                 <p>Select items : ${items.length}</p>
                 <p>Total Shipping Charge : ${shippingCharge}</p>
                 <p>Tax : ${tax}</p>
