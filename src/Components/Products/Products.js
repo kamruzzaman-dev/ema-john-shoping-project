@@ -13,8 +13,8 @@ const Products = () => {
     /* store items which one is clicked */
     const [items, setitems] = useState([]);
     /* function for handle add to cart  */
-    function AddToCart(id){
-        const newCart = [...items , id];
+    function AddToCart(id) {
+        const newCart = [...items, id];
         setitems(newCart);
     }
     console.log(items.length)
@@ -22,13 +22,12 @@ const Products = () => {
         <div className="shop-container">
 
             <div className='Products-container'>
-                {
-                    products.map(product => <Product key={product.id} product={product} AddToCart={AddToCart}></Product>)
-                }
+                    {
+                        products.map(product => <Product key={product.id} product={product} AddToCart={AddToCart}></Product>)
+                    }
             </div>
             <div className='cart-container'>
-                <Cart items = {items}></Cart>
-                <h1>select items : {items.length}</h1>
+                <Cart items={items}></Cart>
             </div>
         </div>
     );

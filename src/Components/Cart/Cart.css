@@ -1,0 +1,35 @@
+.cart-contianer{
+    background-color: #FFE0B3;
+    padding: 15px;
+    height: 100vh;
+    position:fixed;
+}
+.btn-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+.btn{
+    padding: 10px;
+    border: 1px solid #95A0A7;
+    border-radius: 5px;
+    margin: 10px 0px;
+    font-weight: 400;
+    color: #FFFF;
+    cursor: pointer;
+    font-size: 17px;
+
+}
+.btn-clear{
+   background-color: #FF3030;
+}
+.btn-clear:hover{
+    background-color: #aa0f0f;
+}
+.btn-review{
+    background-color: #FF9900;
+}
+.btn-review:hover{
+    background-color: #88550a;
+}
+

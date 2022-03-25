@@ -1,12 +1,35 @@
 import React from 'react';
-
+import './Cart.css'
 const Cart = (props) => {
-    console.log(props)
-    // const {items} = props.items;
-    // console.log(items.length);
+    // console.log(props);
+    /* directly props got a object. and this object had a array with element  */
+    const { items } = props;
+    console.log(items);
+    let totalPrice = 0;
+    let shippingCharge = 0;
+    let tax = 0;
+
+    for (const item of items) {
+        /* totalPrice = totalPrice + item.price;
+        shippingCharge = shippingCharge + item.shipping;
+        tax = tax + parseFloat((item.price * .01).toFixed(2)); */
+        console.log(item);
+    }
+    let grandTotal = totalPrice + shippingCharge + tax;
     return (
-        <div>
-           <h1>click items : {}</h1>
+        <div className='cart-contianer'>
+            <h1>Order Summary</h1>
+            <div>
+                <p>toal price : ${ }</p>
+                <p>Select items : ${items.length}</p>
+                <p>Total Shipping Charge : ${shippingCharge}</p>
+                <p>Tax : ${tax}</p>
+                <h2>Grand Total : ${grandTotal}</h2>
+            </div>
+            <div className='btn-container'>
+                <button className='btn btn-clear'>Clear Cart </button>
+                <button className='btn btn-review'>Review Order</button>
+            </div>
         </div>
     );
 };

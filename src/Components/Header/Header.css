@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: space-around;
     padding: 5px;
+    /* position:fixed; */
+    z-index: 1;
 }
 
 .right-container a{
